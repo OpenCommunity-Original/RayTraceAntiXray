@@ -8,8 +8,8 @@
   <artifactId>raytraceantixray</artifactId>
   <name>RayTraceAntiXray</name>
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -19,12 +19,12 @@
       <url>https://repo.papermc.io/repository/maven-public/</url>
     </repository>
     <repository>
-      <id>minecraft-libraries</id>
-      <url>https://libraries.minecraft.net/</url>
-    </repository>
-    <repository>
       <id>dmulloy2-repo</id>
       <url>https://repo.dmulloy2.net/repository/public/</url>
+    </repository>
+    <repository>
+      <id>minecraft-libraries</id>
+      <url>https://libraries.minecraft.net/</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -68,7 +68,7 @@
     <dependency>
       <groupId>com.comphenix.protocol</groupId>
       <artifactId>ProtocolLib</artifactId>
-      <version>5.0.0-SNAPSHOT</version>
+      <version>5.0.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

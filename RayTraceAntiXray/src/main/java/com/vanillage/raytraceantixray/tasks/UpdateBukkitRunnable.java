@@ -4,8 +4,8 @@ import java.util.Queue;
 
 import org.bukkit.World;
 import org.bukkit.World.Environment;
-import org.bukkit.craftbukkit.v1_19_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_19_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_20_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_20_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -32,6 +32,10 @@ public final class UpdateBukkitRunnable extends BukkitRunnable {
     @Override
     public void run() {
         plugin.getServer().getOnlinePlayers().forEach(p -> {
+            if (p == null) {
+                return;
+            }
+
             PlayerData playerData = plugin.getPlayerData().get(p.getUniqueId());
             World world = playerData.getLocations()[0].getWorld();
 
